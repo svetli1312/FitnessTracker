@@ -1,0 +1,37 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Daily Gains"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitnessTracker"
+        tools:targetApi="31">
+
+        <!-- SplashActivity is the first screen now -->
+        <activity android:name=".screens.SplashActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".screens.WelcomeActivity" />
+        <activity android:name=".screens.MealsByDateActivity" />
+        <activity android:name=".screens.CalendarActivity" />
+        <activity android:name=".screens.SearchMealActivity" />
+        <activity android:name=".screens.NutritionActivity" />
+        <activity android:name=".screens.TextRecognitionActivity" />
+        <activity android:name=".AddWeightActivity" />
+        <activity android:name=".screens.AddEntryActivity" />
+        <activity android:name=".screens.MainActivity" />
+    </application>
+
+</manifest>
